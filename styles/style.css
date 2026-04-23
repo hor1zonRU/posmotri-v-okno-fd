@@ -140,7 +140,7 @@ ol {
   gap: 20px;
 }
 
-.search-form__label-text {
+.search-form__label {
   cursor: pointer;
 }
 
@@ -205,7 +205,7 @@ ol {
   opacity: 0;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after{
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1; 
 }
 
