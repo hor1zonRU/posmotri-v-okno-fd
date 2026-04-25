@@ -18,7 +18,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', 'Oswald', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -65,6 +65,7 @@ ol {
   font-size: 18px;
   text-align: center;
   border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .search-form__submit-button {
@@ -107,6 +108,7 @@ ol {
   display: flex;
   align-items: flex-end;
   gap: 30px;
+  width: 1140px;
 }
 
 /* Левая часть - вывод выбранного видео */
@@ -114,6 +116,8 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
+  width: 711px;
+  height: 456px;
 }
 
 .search-form {
@@ -133,20 +137,25 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 20px;
-}
-
-.search-form__label {
-  cursor: pointer;
+  gap: 15px;
 }
 
 .search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: none;
   width: 212px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .search-form__textfield {
@@ -160,6 +169,7 @@ ol {
   color: #fff;
   appearance: none;
   width: 225px;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .search-form__textfield::placeholder {
@@ -183,6 +193,7 @@ ol {
   align-items: center;
   width: fit-content;
   gap: 5px;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox {
@@ -192,7 +203,7 @@ ol {
   border: 1px solid #fff;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text  {
   text-decoration: underline;
 }
 
@@ -215,7 +226,7 @@ ol {
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: top right;
+  object-position: center;
   flex-shrink: 0;
 }
 
@@ -229,6 +240,7 @@ ol {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
 }
 
 .content__accent {
@@ -236,6 +248,7 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: 'Oswald', sans-serif;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -265,7 +278,7 @@ ol {
   outline: 1px solid #fff;
 }
 
-.content__card-link_current {
+.content__card-link_current,  .content__card-link:active  {
   background-color: #545050;
 }
 
@@ -289,7 +302,7 @@ ol {
   position: relative;
   width: 399px;
   height: 298px;
-  overflow: hidden scroll;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -299,10 +312,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.content__list-item {
-  padding: 3px;
 }
 
 .content__video-card {
